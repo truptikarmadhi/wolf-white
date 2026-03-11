@@ -266,7 +266,7 @@
             }
         ?>
             <!-- services-section -->
-            <section class="services-section <?php echo $bg_color; ?> position-relative">
+            <section class="services-section <?php echo $bg_color; ?> position-relative overflow-hidden">
                 <div class="container container2">
                     <div class="d-lg-flex align-items-center justify-content-between dmb-70 tmb-35">
                         <?php if (!empty($main_heading)): ?>
@@ -534,15 +534,15 @@
             <!-- sub-hero-section -->
             <section class="sub-hero-section <?php echo $bg_color; ?> position-relative overflow-hidden">
                 <div class="container">
-                    <div class="d-flex dmb-45">
-                        <div class="col-6">
+                    <div class="d-lg-flex dmb-45">
+                        <div class="col-lg-6 col-8">
                             <?php if (!empty($prefix)): ?>
                                 <div class="">
                                     <?php echo $prefix; ?>
                                 </div>
                             <?php endif; ?>
                             <?php if (!empty($heading)): ?>
-                                <div class="playfair-regular font56 leading68 text-F0EBE2">
+                                <div class="playfair-regular font56 leading68 res-font36 res-leading45 text-F0EBE2">
                                     <?php echo $heading; ?>
                                 </div>
                             <?php endif; ?>
@@ -608,25 +608,34 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-6">
-                            <div class="col-9">
+                            <div class="col-lg-9">
                                 <?php if (!empty($heading)): ?>
-                                    <div class="playfair-regular font48 leading52 text-F0EBE2 dmb-30">
+                                    <div class="playfair-regular font48 leading52 res-font35 res-leading42 text-F0EBE2 dmb-30 tmb-15">
                                         <?php echo $heading; ?>
                                     </div>
                                 <?php endif; ?>
+                                <div class="d-lg-inline-flex d-none">
+                                    <?php if (!empty($button['url']) && !empty($button['title'])): ?>
+                                        <a href="<?php echo $button['url']; ?>" target="<?php echo $button['target'] == '_blank' ? "_blank" : ""; ?>" class="text-decoration-none btnA bg-F0EBE2-btn montserrat font15 leading18 fw-medium text-uppercase d-inline-flex align-items-center rounded-pill">
+                                            <?php echo $button['title']; ?>
+                                        </a>
+                                    <?php endif; ?>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <?php if (!empty($description)): ?>
+                                <div class="montserrat font14 leading21 text-F0EBE2 fw-normal pe-lg-4 pe-3">
+                                    <?php echo $description; ?>
+                                </div>
+                            <?php endif; ?>
+                            <div class="d-lg-none d-inline-flex tpt-30">
                                 <?php if (!empty($button['url']) && !empty($button['title'])): ?>
                                     <a href="<?php echo $button['url']; ?>" target="<?php echo $button['target'] == '_blank' ? "_blank" : ""; ?>" class="text-decoration-none btnA bg-F0EBE2-btn montserrat font15 leading18 fw-medium text-uppercase d-inline-flex align-items-center rounded-pill">
                                         <?php echo $button['title']; ?>
                                     </a>
                                 <?php endif; ?>
                             </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <?php if (!empty($description)): ?>
-                                <div class="montserrat font14 leading21 text-F0EBE2 fw-normal pe-4">
-                                    <?php echo $description; ?>
-                                </div>
-                            <?php endif; ?>
                         </div>
                     </div>
                 </div>
@@ -647,14 +656,14 @@
             <!-- our-team-section -->
             <section class="our-team-section position-relative">
                 <div class="container">
-                    <div class="col-6 dmb-45">
+                    <div class="col-lg-6 dmb-45 tmb-35">
                         <?php if (!empty($heading)): ?>
-                            <div class="playfair-regular font48 leading52 text-black dmb-10">
+                            <div class="playfair-regular font48 leading52 res-font36 res-leading45 text-black dmb-10 tmb-15">
                                 <?php echo $heading; ?>
                             </div>
                         <?php endif; ?>
                         <?php if (!empty($description)): ?>
-                            <div class="montserrat font18 leading27 text-black fw-normal">
+                            <div class="montserrat font18 leading27 res-font16 text-black fw-normal">
                                 <?php echo $description; ?>
                             </div>
                         <?php endif; ?>
@@ -669,19 +678,19 @@
                                 $member_name = get_the_title();
                                 $member_position = get_the_excerpt();
                         ?>
-                                <div class="col-3 team-card dmt-45">
+                                <div class="col-xl-3 col-md-4 col-6 team-card tmt-30 dmt-45">
                                     <?php if (!empty($image)): ?>
                                         <div class="team-img dmb-15">
                                             <img src="<?php echo $image; ?>" alt="<?php echo $image; ?>" class="w-100 h-100 object-cover">
                                         </div>
                                     <?php endif; ?>
                                     <?php if (!empty($member_name)): ?>
-                                        <div class="montserrat font20 leading28 text-303E3D fw-medium">
+                                        <div class="montserrat font20 leading28 res-font18 text-303E3D fw-medium">
                                             <?php echo $member_name; ?>
                                         </div>
                                     <?php endif; ?>
                                     <?php if (!empty($member_position)): ?>
-                                        <div class="montserrat font18 leading28 text-black opacity30 fw-normal">
+                                        <div class="montserrat font18 leading28 res-font14 text-black opacity30 fw-normal">
                                             <?php echo $member_position; ?>
                                         </div>
                                     <?php endif; ?>
@@ -704,10 +713,10 @@
             <section class="expertise-section">
                 <div class="container">
                     <div class="row">
-                        <div class="col-6">
-                            <div class="col-10 pe-3">
+                        <div class="col-lg-6">
+                            <div class="col-lg-10 pe-3">
                                 <?php if (!empty($heading)): ?>
-                                    <div class="playfair-regular font48 leading48 text-black dmb-15">
+                                    <div class="playfair-regular font48 leading48 res-font36 res-leading40 text-black dmb-15 tpb-60 tmb-0">
                                         <?php echo $heading; ?>
                                     </div>
                                 <?php endif; ?>
@@ -716,7 +725,7 @@
                                         <?php echo $description; ?>
                                     </div>
                                 <?php endif; ?>
-                                <div class="dmt-30">
+                                <div class="dmt-30 d-lg-inline-flex d-none">
                                     <?php if (!empty($button['url']) && !empty($button['title'])): ?>
                                         <a href="<?php echo $button['url']; ?>" target="<?php echo $button['target'] == '_blank' ? "_blank" : ""; ?>" class="text-decoration-none btnA bg-AF9DA3-btn montserrat font15 leading18 fw-medium text-uppercase d-inline-flex align-items-center rounded-pill">
                                             <?php echo $button['title']; ?>
@@ -725,20 +734,20 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-6 ps-5">
+                        <div class="col-lg-6 ps-lg-5">
                             <?php if (!empty($expertise_cards)):
                                 foreach ($expertise_cards as $cards):
                                     $heading = $cards['heading'];
                                     $description = $cards['description'];
                             ?>
-                                    <div class="expertise-card dpt-45 dpb-45">
+                                    <div class="expertise-card dpt-45 dpb-45 tpb-35">
                                         <?php if (!empty($heading)): ?>
-                                            <div class="montserrat font32 leading34 text-303E3D fw-medium dmb-15">
+                                            <div class="montserrat font32 leading34 res-font22 res-leading27 text-303E3D fw-medium dmb-15 tmb-10">
                                                 <?php echo $heading; ?>
                                             </div>
                                         <?php endif; ?>
                                         <?php if (!empty($description)): ?>
-                                            <div class="montserrat font16 leading24 text-303E3D fw-normal pe-3">
+                                            <div class="montserrat font16 leading24 res-font14 res-leading21 text-303E3D fw-normal pe-3">
                                                 <?php echo $description; ?>
                                             </div>
                                         <?php endif; ?>
@@ -768,14 +777,14 @@
             <!-- creative-showcase-section -->
             <section class="creative-showcase-section <?php echo $bg_color; ?> overflow-hidden">
                 <div class="container">
-                    <div class="dmb-35">
+                    <div class="dmb-35 ">
                         <?php if (!empty($heading)): ?>
-                            <div class="playfair-regular font56 leading68 text-F0EBE2">
+                            <div class="playfair-regular font56 leading68 res-font36 res-leading45 text-F0EBE2 tmb-15">
                                 <?php echo $heading; ?>
                             </div>
                         <?php endif; ?>
                         <?php if (!empty($description)): ?>
-                            <div class="montserrat font18 leading27 text-F0EBE2 fw-normal">
+                            <div class="montserrat font18 leading27 res-font16 text-F0EBE2 fw-normal pe-lg-0 pe-3">
                                 <?php echo $description; ?>
                             </div>
                         <?php endif; ?>
@@ -784,24 +793,24 @@
 
                     <script id="case-template" type="text/x-handlebars-template">
                         {{#each posts}}
-                            <div class="showcase-cards position-relative w-100 <?php echo $bg_color; ?> dpt-50 dpb-50">
-                                <div class="showcase-card d-flex">
-                                    <div class="col-6 pe-5">
+                            <div class="showcase-cards position-relative w-100 <?php echo $bg_color; ?>  dpt-50 dpb-50 tpt-25 tpb-45">
+                                <div class="showcase-card d-flex flex-lg-row flex-column">
+                                    <div class="col-lg-6 pe-lg-5">
                                         <div class="showcase-img w-100">
                                             <img src="{{image}}" alt="" class="w-100 h-100 object-cover">
                                         </div>
                                     </div>
-                                    <div class="col-6 ps-5">
-                                        <div class="h-100 d-flex flex-column justify-content-between dpt-25 dpb-35">
-                                            <div class="d-flex align-items-center">
+                                    <div class="col-lg-6 ps-lg-5">
+                                        <div class="h-100 d-flex flex-column justify-content-between dpt-25 dpb-35 tpb-0">
+                                            <div class="d-flex flex-wrap align-items-center tmb-30">
                                                 {{#each categories}}
-                                                    <div class="montserrat font13 leading20 text-F0EBE2 fw-normal border-F0EBE2-25 text-capitalize rounded-pill px-4 py-1 me-2">
+                                                    <div class="montserrat font13 leading20 text-F0EBE2 fw-normal border-F0EBE2-25 text-capitalize rounded-pill px-4 py-1 me-2 tmb-10">
                                                         {{name}}
                                                     </div>
                                                 {{/each}}
                                             </div>
                                             <div class="">
-                                                <div class="montserrat font32 leading42 text-F0EBE2 fw-normal dmb-10">
+                                                <div class="montserrat font32 leading42 res-font24 res-leading30 text-F0EBE2 fw-normal dmb-10">
                                                     {{title}}
                                                 </div>
                                                 <div class="montserrat font16 leading24 res-font14 res-leading20 text-F0EBE2 fw-normal dmb-25">
@@ -829,14 +838,14 @@
             <!-- latest-blog-section -->
             <section class="latest-blog-section">
                 <div class="container">
-                    <div class="dmb-55">
+                    <div class="dmb-55 tmb-40">
                         <?php if (!empty($heading)): ?>
-                            <div class="playfair-regular font56 leading68 text-black text-capitalize dmb-10">
+                            <div class="playfair-regular font56 leading68 res-font40 res-leading48 text-black text-capitalize dmb-10 tmb-15">
                                 <?php echo $heading; ?>
                             </div>
                         <?php endif; ?>
                         <?php if (!empty($description)): ?>
-                            <div class="montserrat font18 leading27 text-black fw-normal">
+                            <div class="montserrat font18 leading27 res-font16 text-black fw-normal">
                                 <?php echo $description; ?>
                             </div>
                         <?php endif; ?>
@@ -848,12 +857,12 @@
                         <div class="row row16">
                                 {{#each posts}}
                                     {{#if (eq @index 0)}}
-                                        <div class="col-6 left-blog-cards">
+                                        <div class="col-lg-6 left-blog-cards">
                                             <div class="post-cards">
                                                 <div class="post-img radius5 overflow-hidden dmb-25">
                                                     <img src="{{image}}" alt="{{title}}" class="w-100 h-100 object-cover">
                                                 </div>
-                                                <div class="d-flex align-items-center justify-content-between dmb-15">
+                                                <div class="d-flex align-items-center justify-content-between tmb-25 dmb-15">
                                                     {{#each categories}}
                                                         <div class="montserrat font13 leading20 text-black fw-normal border-808080-25 text-capitalize rounded-pill px-4 py-1">
                                                             {{name}}
@@ -866,13 +875,13 @@
                                                     {{/if}}
                                                 </div>
                                                 <div class="pe-4">
-                                                    <div class="montserrat font24 leading34 text-black fw-medium dmb-10">
+                                                    <div class="montserrat font24 leading34 res-font22 res-leading30 text-black fw-medium dmb-10">
                                                         {{title}}
                                                     </div>
-                                                    <div class="col-9 montserrat font14 leading20 text-black fw-normal pe-3">
+                                                    <div class="col-lg-9 montserrat font14 leading20 text-black fw-normal pe-lg-3">
                                                         {{content}}
                                                     </div>
-                                                    <a href="{{link}}" class="montserrat font15 leading20 text-black fw-normal d-inline-flex dmt-10">
+                                                    <a href="{{link}}" class="montserrat font15 leading20 text-black fw-normal d-inline-flex tmt-5 dmt-10">
                                                         Read more
                                                     </a>
                                                 </div>
@@ -880,17 +889,17 @@
                                         </div>
                                     {{/if}}
                                 {{/each}}
-                                <div class="col-6 right-blog-cards">
+                                <div class="col-lg-6 right-blog-cards">
                                     {{#each posts}}
                                         {{#if (and (gt @index 0) (lt @index 4))}}
-                                        <div class="post-cards d-flex align-items-center dmt-30">
-                                            <div class="col-6 pe-4">
-                                                <div class="post-img w-100 radius5 overflow-hidden">
+                                        <div class="post-cards d-flex flex-column flex-lg-row align-items-center tmt-45 dmt-30">
+                                            <div class="col-12 col-lg-6 pe-lg-4">
+                                                <div class="post-img w-100 radius5 overflow-hidden tmb-25">
                                                     <img src="{{image}}" alt="{{title}}" class="w-100 h-100 object-cover">
                                                 </div>
                                             </div>
                                             <div class="">
-                                                <div class="d-flex align-items-center justify-content-between dmb-15">
+                                                <div class="d-flex align-items-center justify-content-between tmb-25 dmb-15">
                                                     {{#each categories}}
                                                         <div class="montserrat font13 leading20 text-black fw-normal border-808080-25 text-capitalize rounded-pill px-4 py-1">
                                                             {{name}}
@@ -903,10 +912,13 @@
                                                     {{/if}}
                                                 </div>
                                                 <div class="pe-4">
-                                                    <div class="montserrat font24 leading34 text-black fw-medium dmb-15">
+                                                    <div class="montserrat font24 leading34 res-font22 res-leading30 text-black fw-medium tmb-10 dmb-15">
                                                         {{title}}
                                                     </div>
-                                                    <a href="{{link}}" class="montserrat font15 leading20 text-black fw-normal d-inline-flex">
+                                                    <div class="col-lg-9 montserrat font14 leading20 text-black fw-normal pe-lg-3 d-lg-none d-block">
+                                                        {{content}}
+                                                    </div>
+                                                    <a href="{{link}}" class="montserrat font15 leading20 text-black fw-normal d-inline-flex tmt-5 dmt-10">
                                                         Read more
                                                     </a>
                                                 </div>
@@ -919,7 +931,7 @@
                             <div class="row row16">
                                 {{#each posts}}
                                     {{#if (gt @index 3)}}
-                                        <div class="col-4 post-cards dmt-55">
+                                        <div class="col-lg-4 post-cards tmt-45 dmt-55">
                                             <div class="post-img radius5 overflow-hidden dmb-25">
                                                 <img src="{{image}}" alt="{{title}}" class="w-100 h-100 object-cover">
                                             </div>
@@ -936,13 +948,13 @@
                                                 {{/if}}
                                             </div>
                                             <div class="pe-4">
-                                                <div class="montserrat font24 leading34 text-black fw-medium dmb-10">
+                                                <div class="montserrat font24 leading34 res-font22 res-leading30 text-black fw-medium dmb-10">
                                                     {{title}}
                                                 </div>
-                                                <div class="montserrat font14 leading20 text-black fw-normal pe-3">
+                                                <div class="montserrat font14 leading20 text-black fw-normal pe-lg-3">
                                                     {{content}}
                                                 </div>
-                                                <a href="{{link}}" class="montserrat font15 leading20 text-black fw-normal d-inline-flex dmt-25">
+                                                <a href="{{link}}" class="montserrat font15 leading20 text-black fw-normal d-inline-flex tmt-5 dmt-25">
                                                     Read more
                                                 </a>
                                             </div>
@@ -1078,17 +1090,17 @@
             $privacy_group = get_sub_field('privacy_group');
         ?>
             <section class="privacy-section">
-                <div class="container">
+                <div class="container px-p-0">
                     <div class="row justify-content-between">
-                        <div class="col-lg-3 tmb-80">
+                        <div class="col-lg-3 tmb-85 ps-p-p">
                             <div class="position-sticky top-0">
-                                <ul class="privacy-links list-none ps-0 mb-0 list-none d-flex flex-lg-column flex-row" id="privacy-links">
+                                <ul class="privacy-links list-none ps-0 mb-0 list-none d-flex flex-lg-column flex-row " id="privacy-links">
                                     <?php if (!empty($privacy_group)):
                                         foreach ($privacy_group as $key => $group):
                                             $heading = $group['heading'];
                                             $description = $group['description'];
                                     ?>
-                                            <li class="dmb-5 dpt-10 dpb-10">
+                                            <li class="dmb-5 dpt-10 dpb-10 mx-4 mx-lg-0">
                                                 <?php if (!empty($heading)): ?>
                                                     <a href="#<?php echo sanitize_title($heading); ?>" class="menu-item montserrat font18 leading27 text-black fw-normal text-nowrap text-decoration-none">
                                                         <?php echo $heading; ?>
@@ -1100,7 +1112,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-lg-8 ps-lg-3">
+                        <div class="col-lg-8 ps-lg-3 px-p-p">
                             <div class="col-lg-11 ms-auto">
                                 <?php if (!empty($privacy_group)):
                                     foreach ($privacy_group as $key => $group):
@@ -1114,7 +1126,7 @@
                                                 </div>
                                             <?php endif; ?>
                                             <?php if (!empty($description)): ?>
-                                                <div class="montserrat font16 leading24 res-font14 res-leading20 text-black fw-normal dmb-20 tmb-25">
+                                                <div class="montserrat font16 leading24 res-font14 res-leading20 text-black fw-normal dmb-20 tmb-25 pe-lg-0 pe-3">
                                                     <?php echo $description; ?>
                                                 </div>
                                             <?php endif; ?>

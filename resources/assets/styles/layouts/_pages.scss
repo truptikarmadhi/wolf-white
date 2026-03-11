@@ -29,4 +29,8 @@
 
 .sub-hero-img {
     height: 810px;
+
+    @include media-breakpoint-down(lg){
+        height: 325px;
+    }
 }

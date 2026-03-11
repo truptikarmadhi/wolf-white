@@ -18,7 +18,7 @@
   margin-left: -0px;
   margin-right: -0px;
 
-  &>* {
+  & > * {
     padding-left: 0px;
     padding-right: 0px;
   }
@@ -28,7 +28,7 @@
   margin-left: -8px;
   margin-right: -8px;
 
-  >* {
+  > * {
     padding-left: 8px;
     padding-right: 8px;
   }
@@ -38,7 +38,7 @@
   margin-left: -12px;
   margin-right: -12px;
 
-  >* {
+  > * {
     padding-left: 12px;
     padding-right: 12px;
   }
@@ -48,7 +48,7 @@
   margin-left: -14px;
   margin-right: -14px;
 
-  >* {
+  > * {
     padding-left: 14px;
     padding-right: 14px;
   }
@@ -58,7 +58,7 @@
   margin-left: -16px;
   margin-right: -16px;
 
-  >* {
+  > * {
     padding-left: 16px;
     padding-right: 16px;
   }
@@ -96,9 +96,12 @@
     padding-left: 0 !important;
   }
 
+  .ps-p-p {
+    padding-left: 15px !important;
+  }
   .px-p-p {
-    padding-left: 25px !important;
-    padding-right: 25px !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
   }
 
   .mx-m-0 {
@@ -134,5 +137,15 @@
     text-overflow: initial !important;
     line-clamp: initial !important;
     -webkit-line-clamp: initial !important;
+  }
+
+  .res-row5 {
+    margin-left: -5px;
+    margin-right: -5px;
+
+    > * {
+      padding-left: 5px;
+      padding-right: 5px;
+    }
   }
 }
