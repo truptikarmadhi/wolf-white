@@ -926,6 +926,60 @@
                     </div>
                 </section>
 
+
+            <?php elseif (get_row_layout() == 'recent_service_section'):
+                $heading = get_sub_field('heading');
+                $button = get_sub_field('button');
+
+                $current_post_id = get_the_ID();
+
+                $args = array(
+                    'post_type'      => 'services',
+                    'posts_per_page' => -1, // sabhi posts
+                    'post__not_in'   => array($current_post_id) // current post exclude
+                );
+
+                $query = new WP_Query($args);
+            ?>
+                <!-- recent-slider-section -->
+                <section class="recent-slider-section position-relative overflow-hidden">
+                    <div class="container">
+                        <div class="d-flex align-items-center justify-content-between dmb-50">
+                            <?php if(!empty($heading)):?>
+                                <div class="playfair-regular font48 leading52 text-black">
+                                    <?php echo $heading; ?>
+                                </div>
+                            <?php endif; ?>
+                            <div class="d-flex align-items-center">
+                                <div class="service-dots me-4"></div>
+                                <?php if (!empty($button['url']) && !empty($button['title'])): ?>
+                                    <a href="<?php echo $button['url']; ?>" target="<?php echo $button['target'] == '_blank' ? "_blank" : ""; ?>" class="text-decoration-none btnA bg-transparent-btn montserrat font15 leading18 fw-medium text-uppercase d-inline-flex align-items-center rounded-pill">
+                                        <?php echo $button['title']; ?>
+                                    </a>
+                                <?php endif; ?>
+                            </div>
+                        </div>
+                        <div class="col-10 pe-5">
+                            <div class="col-12 pe-4 recent-service-slider">
+                                <?php if($query->have_posts()):
+                                    while($query->have_posts()): $query->the_post(); 
+                                        $service_id = get_the_ID();
+                                        $link = get_the_permalink($service_id);
+                                        $image = get_the_post_thumbnail_url($service_id, 'medium');
+                                    ?>
+                                        <a href="<?php echo $link; ?>" class="service-image h-100">
+                                            <?php if(!empty($image)):?>
+                                                <img src="<?php echo $image; ?>" alt="" class="w-100 h-100 object-cover">
+                                            <?php endif; ?>
+                                        </a>
+                                    <?php endwhile;
+                                    wp_reset_postdata();
+                                endif; ?>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
             
             <?php elseif (get_row_layout() == 'contact_form_section'):
                 $heading = get_sub_field('heading');
@@ -1008,7 +1062,7 @@
                                             ?>
                                                 <li class="dmb-5 dpt-10 dpb-10">
                                                     <?php if(!empty($heading)):?>
-                                                        <a href="#privacy-<?php echo $key + 1; ?>" class="menu-item montserrat font18 leading27 text-black fw-normal text-nowrap text-decoration-none">
+                                                        <a href="#<?php echo sanitize_title($heading); ?>" class="menu-item montserrat font18 leading27 text-black fw-normal text-nowrap text-decoration-none">
                                                             <?php echo $heading; ?>
                                                         </a>
                                                     <?php endif; ?>
@@ -1025,7 +1079,7 @@
                                         $heading = $group['heading'];
                                         $description = $group['description'];
                                     ?>
-                                        <div class="privacy-content dmb-40" id="privacy-<?php echo $key + 1; ?>">
+                                        <div class="privacy-content dmb-40" id="<?php echo sanitize_title($heading); ?>">
                                             <?php if(!empty($heading)):?>
                                                 <div class="playfair-regular font48 leading48 res-font40 text-black dmb-15 tmb-25">
                                                     <?php echo $heading; ?>
