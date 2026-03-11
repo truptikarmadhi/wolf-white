@@ -1,0 +1,59 @@
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+    appearance: none !important;
+    -moz-appearance: none !important;
+    -webkit-appearance: none !important;
+}
+
+.btnA {
+    height: 47px;
+    padding-left: 40px;
+    padding-right: 40px;
+    transition: all 0.3s ease-in-out;
+
+    &.border-F0EBE2-btn {
+        background-color: transparent;
+        border: 1px solid $color-F0EBE2;
+        color: $color-F0EBE2;
+
+        &:hover {
+            background-color: $color-F0EBE2;
+            color: $color-303E3D;
+        }
+    }
+
+    &.bg-F0EBE2-btn {
+        background-color: $color-F0EBE2;
+        border: 1px solid $color-F0EBE2;
+        color: $color-303E3D;
+
+        &:hover {
+            background-color: transparent;
+            color: $color-F0EBE2;
+        }
+    }
+
+    &.bg-AF9DA3-btn {
+        background-color: $color-AF9DA3;
+        border: 1px solid $color-AF9DA3;
+        color: $color-F0EBE2;
+
+        &:hover {
+            background-color: transparent;
+            color: $color-AF9DA3;
+        }
+    }
+
+    &.bg-DEE5DA-btn {
+        background-color: $color-DEE5DA;
+        border: 1px solid $color-DEE5DA;
+        color: $color-303E3D;
+
+        &:hover {
+            background-color: transparent;
+            color: $color-DEE5DA;
+        }
+    }
+}

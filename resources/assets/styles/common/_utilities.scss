@@ -1,0 +1,324 @@
+//background color
+.bg-F0EBE2 {
+    background-color: $color-F0EBE2;
+}
+
+.bg-AF9DA3 {
+    background-color: $color-AF9DA3;
+}
+
+.bg-303E3D {
+    background-color: $color-303E3D;
+}
+
+.bg-DEE5DA {
+    background-color: $color-DEE5DA;
+}
+
+.bg-DEE5DA {
+    background-color: $color-DEE5DA;
+}
+
+.bg-AB985F {
+    background-color: $color-AB985F;
+}
+
+//text color
+.text-F0EBE2 {
+    color: $color-F0EBE2;
+}
+
+.text-AF9DA3 {
+    color: $color-AF9DA3;
+}
+
+.text-303E3D {
+    color: $color-303E3D;
+}
+
+.text-DEE5DA {
+    color: $color-DEE5DA;
+}
+
+.text-AB985F {
+    color: $color-AB985F;
+}
+
+.border-808080-25{
+    border: 1px solid rgba($color: $color-808080, $alpha: 0.25);
+}
+.border-F0EBE2-25{
+    border: 1px solid rgba($color: $color-F0EBE2, $alpha: 0.25);
+}
+//font size
+.font12 {
+    font-size: $font12;
+}
+
+.font13 {
+    font-size: $font13;
+}
+
+.font14 {
+    font-size: $font14;
+}
+
+.font15 {
+    font-size: $font15;
+}
+
+.font16 {
+    font-size: $font16;
+}
+
+.font18 {
+    font-size: $font18;
+}
+
+.font20 {
+    font-size: $font20;
+}
+
+.font24 {
+    font-size: $font24;
+}
+
+.font28 {
+    font-size: $font28;
+}
+
+.font32 {
+    font-size: $font32;
+}
+
+.font40 {
+    font-size: $font40;
+}
+
+.font48 {
+    font-size: $font48;
+}
+
+.font56 {
+    font-size: $font56;
+}
+
+.font64 {
+    font-size: $font64;
+}
+
+//line height
+.leading18 {
+    line-height: $leading18;
+}
+
+.leading20 {
+    line-height: $leading20;
+}
+
+.leading21 {
+    line-height: $leading21;
+}
+
+.leading24 {
+    line-height: $leading24;
+}
+
+.leading27 {
+    line-height: $leading27;
+}
+
+.leading28 {
+    line-height: $leading28;
+}
+
+.leading34 {
+    line-height: $leading34;
+}
+
+.leading42 {
+    line-height: $leading42;
+}
+
+.leading45 {
+    line-height: $leading45;
+}
+
+.leading48 {
+    line-height: $leading48;
+}
+
+.leading52 {
+    line-height: $leading52;
+}
+
+.leading56 {
+    line-height: $leading56;
+}
+
+.leading68 {
+    line-height: $leading68;
+}
+
+//opacity
+.opacity20 {
+    opacity: $opacity20;
+}
+
+.opacity30 {
+    opacity: $opacity30;
+}
+
+.opacity35 {
+    opacity: $opacity35;
+}
+
+.opacity55 {
+    opacity: $opacity55;
+}
+
+//radius
+.radius5 {
+    border-radius: $radius5;
+}
+.radius15 {
+    border-radius: $radius15;
+}
+
+@include media-breakpoint-down(lg) {
+    .res-font12 {
+        font-size: $font12;
+    }
+
+    .res-font13 {
+        font-size: $font13;
+    }
+
+    .res-font14 {
+        font-size: $font14;
+    }
+
+    .res-font15 {
+        font-size: $font15;
+    }
+
+    .res-font16 {
+        font-size: $font16;
+    }
+
+    .res-font18 {
+        font-size: $font18;
+    }
+
+    .res-font20 {
+        font-size: $font20;
+    }
+
+    .res-font24 {
+        font-size: $font24;
+    }
+
+    .res-font28 {
+        font-size: $font28;
+    }
+
+    .res-font32 {
+        font-size: $font32;
+    }
+
+    .res-font40 {
+        font-size: $font40;
+    }
+
+    .res-font48 {
+        font-size: $font48;
+    }
+
+    .res-font56 {
+        font-size: $font56;
+    }
+
+    .res-font64 {
+        font-size: $font64;
+    }
+
+    .res-font22 {
+        font-size: $resfont22;
+    }
+
+    .res-font26 {
+        font-size: $resfont26;
+    }
+
+    .res-font35 {
+        font-size: $resfont35;
+    }
+
+    .res-font36 {
+        font-size: $resfont36;
+    }
+
+    .res-leading18 {
+        line-height: $leading18;
+    }
+
+    .res-leading20 {
+        line-height: $leading20;
+    }
+
+    .res-leading21 {
+        line-height: $leading21;
+    }
+
+    .res-leading24 {
+        line-height: $leading24;
+    }
+
+    .res-leading27 {
+        line-height: $leading27;
+    }
+
+    .res-leading28 {
+        line-height: $leading28;
+    }
+
+    .res-leading34 {
+        line-height: $leading34;
+    }
+
+    .res-leading42 {
+        line-height: $leading42;
+    }
+
+    .res-leading45 {
+        line-height: $leading45;
+    }
+
+    .res-leading48 {
+        line-height: $leading48;
+    }
+
+    .res-leading52 {
+        line-height: $leading52;
+    }
+
+    .res-leading56 {
+        line-height: $leading56;
+    }
+
+    .res-leading68 {
+        line-height: $leading68;
+    }
+
+    .res-leading30 {
+        line-height: $resleading30;
+    }
+
+    .res-leading35 {
+        line-height: $resleading35;
+    }
+
+    .res-leading40 {
+        line-height: $resleading40;
+    }
+}

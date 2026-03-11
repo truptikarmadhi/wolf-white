@@ -1,0 +1,28 @@
+.main-title {
+    p {
+        strong {
+            font-family: "playfairdisplay-italic" !important;
+            font-weight: 400 !important;
+        }
+    }
+}
+
+.divider {
+    border-bottom: 1px solid $white;
+
+    &.divider-black-11 {
+        border-bottom: 1px solid rgba($color: $black, $alpha: 0.11);
+    }
+
+    &.divider-808080-25 {
+        border-bottom: 1px solid rgba($color: $color-808080, $alpha: 0.25);
+    }
+}
+
+.banner-section {
+    height: 530px;
+}
+
+.sub-hero-img {
+    height: 810px;
+}

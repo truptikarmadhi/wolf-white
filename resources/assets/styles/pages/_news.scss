@@ -1,0 +1,128 @@
+.single-post-section {
+    .post-time {
+        &::after {
+            content: "";
+            position: absolute;
+            top: 8px;
+            left: 0;
+            width: 4px;
+            height: 4px;
+            background-color: rgba($color: $black, $alpha: 0.3);
+            border-radius: 50%;
+        }
+    }
+
+    .single-img {
+        height: 684px;
+    }
+
+    .single-post-img {
+        height: 400px;
+    }
+
+    .single-title {
+        p {
+            strong {
+                font-size: $font20;
+                line-height: $leading27;
+                font-weight: 500 !important;
+            }
+        }
+    }
+
+    .single-testimonial {
+        padding-left: 20px;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 1px;
+            height: 100%;
+            background-color: rgba($color: $color-808080, $alpha: 0.55);
+        }
+    }
+}
+
+.ssbp-wrap {
+    &>div {
+        display: flex;
+        align-items: center;
+
+        .ssba-share-text {
+            font-family: "montserrat-variablefont_wght";
+            font-size: $font18;
+            line-height: $leading24;
+            color: $black;
+            font-weight: 500;
+            margin-right: 16px;
+        }
+
+        .ssbp-list {
+            padding-left: 0px !important;
+            margin-bottom: 0px !important;
+
+            li {
+                margin-top: 0px !important;
+
+                &:first-child {
+                    margin-left: 0px !important;
+                }
+
+                .ssbp-btn {
+                    background-color: transparent !important;
+                    border: 1px solid rgba($color: $color-808080, $alpha: 0.55) !important;
+
+                    &:hover {
+                        border: 1px solid rgba($color: $color-808080, $alpha: 0.55) !important;
+                        background-color: rgba($color: $color-808080, $alpha: 0.55) !important;
+
+                        span {
+                            svg {
+                                fill: $black !important;
+                            }
+                        }
+
+                        .color-icon {
+                            svg {
+                                g {
+                                    path {
+                                        fill: $black !important;
+                                    }
+                                }
+
+                                path {
+                                    fill: $black !important;
+                                }
+                            }
+                        }
+                    }
+
+                    span {
+                        svg {
+                            width: 20px;
+                            height: 20px;
+                            fill: $black !important;
+                        }
+                    }
+                }
+
+                &.ssbp-li--twitter {
+                    .ssbp-btn {
+                        span {
+                            svg {
+                                fill: none !important;
+
+                                path {
+                                    fill: $black !important;
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}

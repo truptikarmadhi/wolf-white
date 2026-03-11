@@ -1,0 +1,26 @@
+.privacy-section {
+    .privacy-links {
+        @include media-breakpoint-down(lg) {
+            overflow: auto;
+        }
+
+        li {
+            &.active {
+                border-left: 1px solid rgba($color: $black, $alpha: 0.3);
+                padding-left: 16px;
+
+                a {
+                    font-family: "montserrat-variablefont_wght";
+                    font-weight: 500 !important;
+                }
+            }
+        }
+    }
+
+    .privacy-content {
+        strong {
+            font-family: "montserrat-variablefont_wght";
+            font-weight: 500 !important;
+        }
+    }
+}

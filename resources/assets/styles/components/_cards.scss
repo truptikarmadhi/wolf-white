@@ -1,0 +1,100 @@
+.marquee-item {
+    width: 430px;
+    height: 340px;
+    flex-shrink: 0;
+
+    .member-details {
+        padding-left: 30px;
+        padding-right: 30px;
+        transform: translateY(150px);
+        transition: all 0.3s ease-in-out;
+    }
+
+    &:hover {
+        .member-details {
+            transform: translateY(0px);
+        }
+    }
+}
+
+.service-cards {
+    border-top: 1px solid rgba($color: $color-808080, $alpha: 0.55);
+
+    &:last-child {
+        border-bottom: 1px solid rgba($color: $color-808080, $alpha: 0.55);
+    }
+
+    .service-title {
+        .service-number {
+            width: 60px;
+        }
+    }
+}
+
+.blog-cards {
+    .blog-img {
+        height: 287px;
+    }
+}
+
+.team-card {
+    &:nth-child(-n + 4) {
+        margin-top: 0px !important;
+    }
+
+    .team-img {
+        height: 306px;
+    }
+}
+
+.expertise-card {
+    border-bottom: 1px solid rgba($color: $color-808080, $alpha: 0.25);
+
+    &:first-child {
+        padding-top: 0px !important;
+    }
+
+    &:last-child {
+        padding-bottom: 0px !important;
+        border-bottom: 0px !important;
+    }
+}
+
+.showcase-cards {
+    border-bottom: 1px solid rgba($color: $color-F0EBE2, $alpha: 0.25);
+
+    &:first-child {
+        border-top: 1px solid rgba($color: $color-F0EBE2, $alpha: 0.25);
+    }
+
+    .showcase-card {
+        .showcase-img {
+            height: 450px;
+        }
+    }
+}
+
+.post-cards {
+    .post-img {
+        height: 270px;
+    }
+}
+
+.left-blog-cards {
+    .post-cards {
+        .post-img {
+            height: 415px;
+        }
+    }
+}
+
+.right-blog-cards {
+    .post-cards {
+        &:first-child{
+            margin-top: 0px !important;
+        }
+        .post-img {
+            height: 238px;
+        }
+    }
+}

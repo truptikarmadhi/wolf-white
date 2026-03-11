@@ -1,0 +1,28 @@
+@font-face {
+    font-family: "montserrat-variablefont_wght";
+    src: url("/wp-content/themes/wolf-white-wp/assets/fonts/montserrat-variablefont_wght.ttf") format(truetype);
+}
+
+@font-face {
+    font-family: "playfairdisplay-italic";
+    src: url("/wp-content/themes/wolf-white-wp/assets/fonts/playfairdisplay-italic.ttf") format(truetype);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "playfairdisplay-regular";
+    src: url("/wp-content/themes/wolf-white-wp/assets/fonts/playfairdisplay-regular.ttf") format(truetype);
+    font-weight: 400;
+}
+
+.montserrat {
+    font-family: "montserrat-variablefont_wght";
+}
+
+.playfair-italic {
+    font-family: "playfairdisplay-italic";
+}
+
+.playfair-regular {
+    font-family: "playfairdisplay-regular";
+}
