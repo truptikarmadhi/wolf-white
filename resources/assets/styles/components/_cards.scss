@@ -3,11 +3,23 @@
     height: 340px;
     flex-shrink: 0;
 
+    @include media-breakpoint-down(lg){
+        width: 290px;
+        height: 237px;
+        padding-left: 6px;
+        padding-right: 6px;
+    }
+
     .member-details {
         padding-left: 30px;
         padding-right: 30px;
         transform: translateY(150px);
         transition: all 0.3s ease-in-out;
+
+        @include media-breakpoint-down(lg){
+            padding-left: 16px;
+            padding-right: 16px;
+        }
     }
 
     &:hover {
@@ -27,6 +39,10 @@
     .service-title {
         .service-number {
             width: 60px;
+
+            @include media-breakpoint-down(lg){
+                width: 50px;
+            }
         }
     }
 }
@@ -34,6 +50,10 @@
 .blog-cards {
     .blog-img {
         height: 287px;
+
+        @include media-breakpoint-down(lg){
+            height: 200px;
+        }
     }
 }
 

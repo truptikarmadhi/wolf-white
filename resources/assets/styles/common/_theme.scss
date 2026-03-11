@@ -4,8 +4,8 @@
   padding-right: 80px;
 
   @include media-breakpoint-down(lg) {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
   }
 
   &.container2 {

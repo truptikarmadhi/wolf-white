@@ -21,6 +21,10 @@
 
 .banner-section {
     height: 530px;
+
+    @include media-breakpoint-down(lg){
+        height: 475px;
+    }
 }
 
 .sub-hero-img {
