@@ -50,6 +50,9 @@
 .border-F0EBE2-25{
     border: 1px solid rgba($color: $color-F0EBE2, $alpha: 0.25);
 }
+.border-F0EBE2{
+    border: 1px solid $color-F0EBE2;
+}
 //font size
 .font12 {
     font-size: $font12;

@@ -1,5 +1,6 @@
 #blogContainer,
 .recent-blog-slider,
+.recent-service-slider,
 .blog-slider {
     .slick-list {
         margin-left: -8px;
@@ -13,46 +14,77 @@
 }
 
 #blogContainer,
+.recent-service-slider,
 .blog-slider {
     .slick-list {
         overflow: visible;
     }
 }
 
-.recent-slider-section,
-.blog-slider-section {
-    .blog-dots {
-        ul {
-            display: flex;
-            padding-left: 0px;
-            margin-bottom: 0px;
+.recent-blog-slider {
+    .slick-list {
+        @include media-breakpoint-down(lg) {
+            overflow: visible;
+        }
+    }
+}
 
-            li {
-                margin-left: 8px;
+.recent-service-slider {
+    height: 400px;
 
-                &::marker {
-                    font-size: 0px;
-                    display: none;
-                }
+    @include media-breakpoint-down(lg){
+        height: 245px;
+    }
 
+    .slick-list,
+    .slick-track,
+    .slick-slide {
+        height: 100%;
+    }
+
+    .slick-slide {
+        div {
+            height: 100%;
+        }
+    }
+}
+
+.service-dots,
+.recent-dots,
+.blog-dots {
+    ul {
+        display: flex;
+        padding-left: 0px;
+        margin-bottom: 0px;
+        @include media-breakpoint-down(lg){
+            justify-content: center;
+        }
+
+        li {
+            margin-left: 8px;
+
+            &::marker {
+                font-size: 0px;
+                display: none;
+            }
+
+            &::after {
+                content: "";
+                width: 8px;
+                height: 8px;
+                background-color: rgba($color: $black, $alpha: 0.2);
+                display: flex;
+                border-radius: 50%;
+            }
+
+            &.slick-active {
                 &::after {
-                    content: "";
-                    width: 8px;
-                    height: 8px;
-                    background-color: rgba($color: $black, $alpha: 0.2);
-                    display: flex;
-                    border-radius: 50%;
+                    background-color: rgba($color: $black, $alpha: 1);
                 }
+            }
 
-                &.slick-active {
-                    &::after {
-                        background-color: rgba($color: $black, $alpha: 1);
-                    }
-                }
-
-                button {
-                    display: none;
-                }
+            button {
+                display: none;
             }
         }
     }

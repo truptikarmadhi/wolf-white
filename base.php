@@ -13,14 +13,18 @@ use Curious\Wrapper;
       </div>
     <![endif]-->
     <?php
-      do_action('get_header');
-      get_template_part('templates/header');
+      if ( !is_404() ) {
+          do_action('get_header');
+          get_template_part('templates/header');
+      }
 
-        include Wrapper\template_path();
+      include Wrapper\template_path();
 
-      do_action('get_footer');
-      get_template_part('templates/footer');
-    ?>
+      if ( !is_404() ) {
+          do_action('get_footer');
+          get_template_part('templates/footer');
+      }
+  ?>
 
 
      <?php wp_footer(); ?>

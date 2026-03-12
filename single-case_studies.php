@@ -12,7 +12,6 @@ $testimonial_section = get_field('testimonial_section');
 $next_post = get_next_post();
 ?>
 
-
 <!-- sub-hero-section -->
 <?php if(!empty($hero_section)):
     $background_image = $hero_section['background_image'];
@@ -21,20 +20,20 @@ $next_post = get_next_post();
     $youtube = $hero_section['youtube'];
     $vimeo = $hero_section['vimeo'];
 ?>
-    <section class="sub-hero-section bg-303E3D position-relative overflow-hidden dpt-260">
+    <section class="sub-hero-section bg-303E3D position-relative overflow-hidden tpt-165 dpt-260">
         <div class="container container2">
-            <div class="d-flex align-items-end dmb-75">
-                <div class="col-6">
+            <div class="row align-items-end tmb-60 dmb-75">
+                <div class="col-lg-6 tmb-15">
                     <?php if(!empty($heading)):?>
-                        <div class="playfair-regular font56 leading68 text-F0EBE2">
+                        <div class="playfair-regular font56 leading68 res-font36 res-leading40 text-F0EBE2">
                             <?php echo $heading; ?>
                         </div>
                     <?php endif; ?>
                 </div>
-                <div class="col-6">
-                    <div class="col-9 ms-auto">
+                <div class="col-lg-6">
+                    <div class="col-lg-9 ms-auto">
                         <?php if(!empty($description)):?>
-                            <div class="montserrat font18 leading27 text-F0EBE2 fw-normal">
+                            <div class="montserrat font18 leading27 res-font16 res-leading24 text-F0EBE2 fw-normal">
                                 <?php echo $description; ?>
                             </div>
                         <?php endif; ?>
@@ -78,7 +77,7 @@ $next_post = get_next_post();
     </section>
 <?php endif; ?>
 
-<div class="spacing dmb-95"></div>
+<div class="spacing tmb-75 dmb-95"></div>
 
 <!-- left-right-list-section -->
 <?php if(!empty($left_right_list_section)):
@@ -86,23 +85,23 @@ $next_post = get_next_post();
     $description = $left_right_list_section['description'];
     $lists = $left_right_list_section['lists'];
 ?>
-    <section class="left-right-list-section">
+    <section class="left-right-list-section wow animated animate__fadeInUp" data-wow-duration="1.5s">
         <div class="container">
             <div class="row">
-                <div class="col-7 pe-3">
+                <div class="col-lg-7 pe-lg-3 tmb-50">
                     <?php if(!empty($heading)):?>
-                        <div class="playfair-regular font48 leading52 text-black dmb-40">
+                        <div class="playfair-regular font48 leading52 res-font35 res-leading40 text-black tmb-15 dmb-40">
                             <?php echo $heading; ?>
                         </div>
                     <?php endif; ?>
                     <?php if(!empty($description)):?>
-                        <div class="montserrat font16 leading24 text-black fw-normal">
+                        <div class="montserrat font16 leading24 text-black fw-normal pe-2 pe-lg-0">
                             <?php echo $description; ?>
                         </div>
                     <?php endif; ?>
                 </div>
-                <div class="col-5 ps-4">
-                    <div class="col-11 ms-auto">
+                <div class="col-lg-5 ps-lg-4">
+                    <div class="col-lg-11 ms-auto">
                         <?php if(!empty($lists)):
                             foreach($lists as $list):
                                 $heading = $list['heading'];
@@ -110,12 +109,12 @@ $next_post = get_next_post();
                             ?>
                                 <div class="left-right-list d-flex align-items-center justify-content-between dpt-20 dpb-20">
                                     <?php if(!empty($heading)):?>
-                                        <div class="montserrat font20 leading28 text-black fw-normal">
+                                        <div class="montserrat font20 leading28 res-font18 res-leading18 text-black fw-normal">
                                             <?php echo $heading; ?>
                                         </div>
                                     <?php endif; ?>
                                     <?php if(!empty($data)):?>
-                                        <div class="montserrat font16 leading24 text-black fw-normal opacity-50">
+                                        <div class="montserrat font16 leading24 res-font14 res-leading18 text-black fw-normal opacity-50">
                                             <?php echo $data; ?>
                                         </div>
                                     <?php endif; ?>
@@ -129,21 +128,21 @@ $next_post = get_next_post();
     </section>
 <?php endif; ?>
 
-<div class="spacing dmb-80"></div>
+<div class="spacing tmb-75 dmb-80"></div>
 
 <div class="divider divider-808080-25"></div>
 
-<div class="spacing dmb-110"></div>
+<div class="spacing tmb-65 dmb-110"></div>
 
 <!-- event-highlight-section -->
 <?php if(!empty($event_highlights_section)):
     $heading = $event_highlights_section['heading'];
     $masnory_parts = $event_highlights_section['masnory_parts'];
 ?>
-    <section class="event-highlight-section">
+    <section class="event-highlight-section wow animated animate__fadeInUp" data-wow-duration="1.5s">
         <div class="container">
             <?php if(!empty($heading)):?>
-                <div class="playfair-regular font48 leading52 text-black dmb-45">
+                <div class="playfair-regular font48 leading52 res-font35 res-leading40 text-black tmb-40 dmb-45">
                     <?php echo $heading; ?>
                 </div>
             <?php endif; ?>
@@ -167,7 +166,7 @@ $next_post = get_next_post();
                             $video_url = get_vimeo_video_id($vimeo_url) . "?autoplay=1&loop=1&muted=1&background=1&controls=0";
                         }
                     ?>
-                        <div class="masnory-cards dmb-30">
+                        <div class="masnory-cards tmb-15 dmb-30">
                             <div class="masnory-card position-relative overflow-hidden">
                                 <?php if(!empty($image)):?>
                                     <img src="<?php echo $image['sizes']['fullscreen']; ?>" alt="<?php echo $image['alt']; ?>" class="w-100 h-100 object-cover">
@@ -192,18 +191,18 @@ $next_post = get_next_post();
     </section>
 <?php endif; ?>
 
-<div class="spacing dmb-80"></div>
+<div class="spacing tmb-65 dmb-80"></div>
 
 <!-- testimonial-section -->
 <?php if(!empty($testimonial_section)):
     $testimonial = $testimonial_section['testimonial'];
     $client_name = $testimonial_section['client_name'];
 ?>
-    <section class="testimonial-section bg-AF9DA3 dpt-170 dpb-90">
+    <section class="testimonial-section bg-AF9DA3 tpt-65 tpb-70 dpt-170 dpb-90">
         <div class="container">
-            <div class="col-9">
+            <div class="col-lg-9 wow animated animate__fadeInUp" data-wow-duration="1.5s">
                 <?php if(!empty($testimonial)):?>
-                    <div class="playfair-regular font40 leading48 text-F0EBE2 dmb-25">
+                    <div class="playfair-regular font40 leading48 res-font24 res-leading28 text-F0EBE2 tmb-20 dmb-25">
                         <?php echo $testimonial; ?>
                     </div>
                 <?php endif;?>
@@ -217,13 +216,14 @@ $next_post = get_next_post();
     </section>
 <?php endif; ?>
 
+<!-- next-case-section -->
 <?php if (!empty($next_post)): 
     $next_id = $next_post->ID;
 ?>
-    <section class="next-case-section position-relative overflow-hidden">
-        <img src="<?php echo get_the_post_thumbnail_url($next_id); ?>" alt="" class="w-100 h-100 object-cover">
+    <section class="next-case-section position-relative overflow-hidden wow animated animate__fadeInUp" data-wow-duration="1.5s">
+        <img src="<?php echo get_the_post_thumbnail_url($next_id); ?>" alt="<?php echo get_the_title($next_id); ?>" class="w-100 h-100 object-cover">
         <div class="position-absolute top-0 start-0 w-100 h-100 bg-black opacity-50"></div>
-        <div class="position-absolute top-0 start-0 w-100 h-100 dpt-50 dpb-70 z-3">
+        <div class="position-absolute top-0 start-0 w-100 h-100 tpt-30 tpb-50 dpt-50 dpb-70 z-3">
             <div class="container h-100">
                 <div class="h-100 d-flex flex-column justify-content-between">
                     <div class="d-inline-flex">
@@ -231,16 +231,16 @@ $next_post = get_next_post();
                             next project
                         </div>
                     </div>
-                    <div class="d-flex align-items-end justify-content-between">
+                    <div class="d-flex flex-column flex-lg-row align-items-lg-end justify-content-between">
                         <div class="">
-                            <div class="playfair-regular font48 leading52 text-F0EBE2 text-capitalize dmb-20">
+                            <div class="playfair-regular font48 leading52 res-font36 res-leading40 text-F0EBE2 text-capitalize tmb-15 dmb-20">
                                 <?php echo get_the_title($next_id); ?>  
                             </div>
                             <div class="montserrat font16 leading20 text-F0EBE2">
                                 <?php echo get_the_excerpt($next_id); ?> 
                             </div>
                         </div>
-                        <div class="">
+                        <div class="tmt-25">
                             <a href="<?php echo get_the_permalink($next_id); ?>" class="text-decoration-none btnA bg-F0EBE2-btn montserrat font15 leading18 fw-medium text-uppercase d-inline-flex align-items-center rounded-pill">
                                 View PROJECT
                             </a>

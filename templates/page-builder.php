@@ -46,7 +46,7 @@
                     <?php endif; ?>
                 <?php endif; ?>
                 <div class="position-absolute top-0 start-0 w-100 h-100 bg-black opacity-50 z-1"></div>
-                <div class="position-absolute bottom-0 start-0 w-100 z-2 dpb-55 tpb-45">
+                <div class="position-absolute bottom-0 start-0 w-100 z-2 dpb-55 tpb-45 wow animated animate__fadeInUp" data-wow-duration="1.5s">
                     <div class="container container2">
                         <?php if (!empty($heading)): ?>
                             <div class="col-lg-8 main-title playfair-regular font64 leading68 res-font35 res-leading40 text-F0EBE2 dmb-45 tmb-30">
@@ -79,7 +79,7 @@
             <!-- left-right-content-section -->
             <section class="left-right-content-section">
                 <div class="container container2">
-                    <div class="row">
+                    <div class="row wow animated animate__fadeInUp" data-wow-duration="1.5s">
                         <div class="col-lg-6 col-12">
                             <?php if (!empty($heading)): ?>
                                 <div class="main-title playfair-regular font48 leading52 res-font35 res-leding40 text-black dmb-25 tmb-15">
@@ -124,7 +124,7 @@
             <!-- showcase-slider-section -->
             <section class="showcase-slider-section marquee-section position-relative overflow-hidden">
                 <div class="container container2">
-                    <div class="d-lg-flex align-items-center justify-content-between tmb-35 dmb-55">
+                    <div class="d-lg-flex align-items-center justify-content-between tmb-35 dmb-55 wow animated animate__fadeInUp" data-wow-duration="1.5s">
                         <?php if (!empty($main_heading)): ?>
                             <div class="playfair-regular font48 leading52 res-font36 res-leading45 text-black">
                                 <?php echo $main_heading; ?>
@@ -139,7 +139,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="marquee-wrapper marquee-left position-relative overflow-hidden w-100 dmb-15">
+                <div class="marquee-wrapper marquee-left position-relative overflow-hidden w-100 dmb-15 wow animated animate__fadeInUp" data-wow-duration="1.5s">
                     <div class="marquee d-flex" id="caseContainer">
                         <?php if (!empty($all_or_select) && $all_or_select == "All"): ?>
 
@@ -179,7 +179,7 @@
                         <?php endif; ?>
                     </div>
                 </div>
-                <div class="marquee-wrapper marquee-right position-relative overflow-hidden w-100 dmb-15">
+                <div class="marquee-wrapper marquee-right position-relative overflow-hidden w-100 dmb-15 wow animated animate__fadeInUp" data-wow-duration="1.5s">
                     <div class="marquee d-flex" id="caseRightContainer">
                         <?php if (!empty($all_or_select) && $all_or_select == "All"): ?>
 
@@ -219,7 +219,7 @@
                         <?php endif; ?>
                     </div>
                 </div>
-                <div class="d-inline-flex d-lg-none justify-content-center w-100 tmt-45">
+                <div class="d-inline-flex d-lg-none justify-content-center w-100 tmt-45 wow animated animate__fadeInUp" data-wow-duration="1.5s">
                     <?php if (!empty($button['url']) && !empty($button['title'])): ?>
                         <a href="<?php echo $button['url']; ?>" target="<?php echo $button['target'] == '_blank' ? "_blank" : ""; ?>" class="text-decoration-none btnA bg-AF9DA3-btn montserrat font15 leading18 fw-medium text-uppercase d-inline-flex align-items-center rounded-pill">
                             <?php echo $button['title']; ?>
@@ -266,7 +266,7 @@
             }
         ?>
             <!-- services-section -->
-            <section class="services-section <?php echo $bg_color; ?> position-relative overflow-hidden">
+            <section class="services-section <?php echo $bg_color; ?> position-relative">
                 <div class="container container2">
                     <div class="d-lg-flex align-items-center justify-content-between dmb-70 tmb-35">
                         <?php if (!empty($main_heading)): ?>
@@ -288,24 +288,24 @@
                         </div>
 
                         <script id="service-template" type="text/x-handlebars-template">
-                            <div class="service-images position-relative">
+                                <div class="service-images position-relative">
                                     {{#each posts}}
                                         <img src="{{image}}" alt="{{title}}" data-image="{{title}}" class="position-absolute">
                                     {{/each}}
                                 </div>
-                                    <div class="services-wrapper">
-                                        {{#each posts}}
-                                            <a href="{{link}}" class="service-cards d-block text-decoration-none">
-                                                <div class="service-card dpt-25 dpb-25 tpt-20 tpb-20" data-label="{{title}}">
-                                                    <div class="service-title montserrat font40 leading45 res-font26 res-leading34 fw-medium text-F0EBE2 position-relative d-flex align-items-center">
-                                                        <div class="service-number text-AB985F me-lg-4">{{inc @index}}.0</div>
+                                <div class="services-wrapper">
+                                    {{#each posts}}
+                                        <a href="{{link}}" class="service-cards d-block text-decoration-none">
+                                            <div class="service-card dpt-25 dpb-25 tpt-20 tpb-20" data-label="{{title}}">
+                                                <div class="service-title montserrat font40 leading45 res-font26 res-leading34 fw-medium text-F0EBE2 position-relative d-flex align-items-center">
+                                                    <div class="service-number text-AB985F me-lg-4">{{inc @index}}.0</div>
                                                         {{title}}
-                                                    </div>
                                                 </div>
-                                            </a>
-                                        {{/each}}
-                                    </div> 
-                                </script>
+                                            </div>
+                                        </a>
+                                    {{/each}}
+                                </div> 
+                        </script>
                     <?php else: ?>
                         <div class="service-container">
                             <div class="service-images position-relative">
@@ -359,25 +359,23 @@
             <!-- blog-slider-section -->
             <section class="blog-slider-section position-relative overflow-hidden">
                 <div class="container container2">
-                    <div class="d-lg-flex align-items-center justify-content-between tmb-35 dmb-50">
+                    <div class="d-lg-flex align-items-center justify-content-between tmb-35 dmb-50 wow animated animate__fadeInUp" data-wow-duration="1.5s">
                         <?php if (!empty($main_heading)): ?>
                             <div class="playfair-regular font48 leading52 res-font36 res-leading45 text-black">
                                 <?php echo $main_heading; ?>
                             </div>
                         <?php endif; ?>
                         <div class="d-lg-flex d-none align-items-center">
-                            <div class="blog-dots me-4"></div>
-                            <div class="d-lg-inline-flex d-none">
-                                <?php if (!empty($button['url']) && !empty($button['title'])): ?>
-                                    <a href="<?php echo $button['url']; ?>" target="<?php echo $button['target'] == '_blank' ? "_blank" : ""; ?>" class="text-decoration-none btnA bg-AF9DA3-btn montserrat font15 leading18 fw-medium text-uppercase d-inline-flex align-items-center rounded-pill">
-                                        <?php echo $button['title']; ?>
-                                    </a>
-                                <?php endif; ?>
-                            </div>
+                            <div class="blog-dots me-lg-4 tmb-35"></div>
+                            <?php if (!empty($button['url']) && !empty($button['title'])): ?>
+                                <a href="<?php echo $button['url']; ?>" target="<?php echo $button['target'] == '_blank' ? "_blank" : ""; ?>" class="text-decoration-none btnA bg-AF9DA3-btn montserrat font15 leading18 fw-medium text-uppercase d-inline-flex align-items-center rounded-pill">
+                                    <?php echo $button['title']; ?>
+                                </a>
+                            <?php endif; ?>
                         </div>
                     </div>
                     <?php if (!empty($all_or_select) && $all_or_select == "All"): ?>
-                        <div class="col-lg-12 col-11 pe-3 pe-lg-0" id="blogContainer"></div>
+                        <div class="col-lg-12 col-11 pe-3 pe-lg-0 wow animated animate__fadeInUp" data-wow-duration="1.5s" id="blogContainer"></div>
 
                         <script id="post-template" type="text/x-handlebars-template">
                             {{#each posts}}
@@ -414,7 +412,7 @@
                             {{/each}}
                         </script>
                     <?php else: ?>
-                        <div class="blog-slider col-lg-12 col-11 pe-3 pe-lg-0">
+                        <div class="blog-slider col-lg-12 col-11 pe-3 pe-lg-0 wow animated animate__fadeInUp" data-wow-duration="1.5s">
                             <?php if (!empty($blog_post)):
                                 foreach ($blog_post as $blog):
                                     $blog_id = $blog->ID;
@@ -470,15 +468,12 @@
                         </div>
                     <?php endif; ?>
 
-                    <div class="d-lg-none d-flex flex-column align-items-center justify-content-center tmt-40">
-                        <div class="blog-dots me-4"></div>
-                        <div class="d-inline-flex tmt-35">
-                            <?php if (!empty($button['url']) && !empty($button['title'])): ?>
-                                <a href="<?php echo $button['url']; ?>" target="<?php echo $button['target'] == '_blank' ? "_blank" : ""; ?>" class="text-decoration-none btnA bg-AF9DA3-btn montserrat font15 leading18 fw-medium text-uppercase d-inline-flex align-items-center rounded-pill">
-                                    <?php echo $button['title']; ?>
-                                </a>
-                            <?php endif; ?>
-                        </div>
+                    <div class="blog-slider-dots d-flex d-lg-none flex-column align-items-center tmt-40 wow animated animate__fadeInUp" data-wow-duration="1.5s">
+                        <?php if (!empty($button['url']) && !empty($button['title'])): ?>
+                            <a href="<?php echo $button['url']; ?>" target="<?php echo $button['target'] == '_blank' ? "_blank" : ""; ?>" class="text-decoration-none btnA bg-AF9DA3-btn montserrat font15 leading18 fw-medium text-uppercase d-inline-flex align-items-center rounded-pill">
+                                <?php echo $button['title']; ?>
+                            </a>
+                        <?php endif; ?>
                     </div>
             </section>
 
@@ -490,7 +485,7 @@
             $button = get_sub_field('button');
         ?>
             <!-- banner-section -->
-            <section class="banner-section position-relative overflow-hidden">
+            <section class="banner-section position-relative overflow-hidden wow animated animate__fadeInUp" data-wow-duration="1.5s">
                 <?php if (!empty($image)): ?>
                     <img src="<?php echo $image['sizes']['fullscreen']; ?>" alt="<?php echo $heading; ?>" class="w-100 h-100 object-cover">
                 <?php endif; ?>
@@ -519,6 +514,7 @@
                 </div>
             </section>
 
+
         <?php elseif (get_row_layout() == 'sub_hero_section'):
             $background_color = get_sub_field('background_color');
             $prefix = get_sub_field('prefix');
@@ -534,7 +530,7 @@
             <!-- sub-hero-section -->
             <section class="sub-hero-section <?php echo $bg_color; ?> position-relative overflow-hidden">
                 <div class="container">
-                    <div class="d-lg-flex dmb-45">
+                    <div class="d-lg-flex dmb-45 wow animated animate__fadeInUp" data-wow-duration="1.5s">
                         <div class="col-lg-6 col-8">
                             <?php if (!empty($prefix)): ?>
                                 <div class="">
@@ -556,7 +552,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="sub-hero-img">
+                <div class="sub-hero-img wow animated animate__fadeInUp" data-wow-duration="1.5s">
                     <?php if (!empty($background_image) && $background_image == "Image" && !empty($image)): ?>
                         <img src="<?php echo $image['sizes']['fullscreen']; ?>" alt="<?php echo $image['alt']; ?>" class="w-100 h-100 object-cover">
                     <?php elseif (!empty($background_image) && $background_image == "Video" && !empty($video)): ?>
@@ -606,7 +602,7 @@
             <!-- about-left-right-section -->
             <section class="about-left-right-section <?php echo $bg_color; ?>">
                 <div class="container">
-                    <div class="row">
+                    <div class="row wow animated animate__fadeInUp" data-wow-duration="1.5s">
                         <div class="col-lg-6">
                             <div class="col-lg-9">
                                 <?php if (!empty($heading)): ?>
@@ -656,7 +652,7 @@
             <!-- our-team-section -->
             <section class="our-team-section position-relative">
                 <div class="container">
-                    <div class="col-lg-6 dmb-45 tmb-35">
+                    <div class="col-lg-6 dmb-45 tmb-35 wow animated animate__fadeInUp" data-wow-duration="1.5s">
                         <?php if (!empty($heading)): ?>
                             <div class="playfair-regular font48 leading52 res-font36 res-leading45 text-black dmb-10 tmb-15">
                                 <?php echo $heading; ?>
@@ -678,7 +674,7 @@
                                 $member_name = get_the_title();
                                 $member_position = get_the_excerpt();
                         ?>
-                                <div class="col-xl-3 col-md-4 col-6 team-card tmt-30 dmt-45">
+                                <div class="col-xl-3 col-md-4 col-6 team-card tmt-30 dmt-45 wow animated animate__fadeInUp" data-wow-duration="1.5s">
                                     <?php if (!empty($image)): ?>
                                         <div class="team-img dmb-15">
                                             <img src="<?php echo $image; ?>" alt="<?php echo $image; ?>" class="w-100 h-100 object-cover">
@@ -713,10 +709,10 @@
             <section class="expertise-section">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 tmb-60 wow animated animate__fadeInUp" data-wow-duration="1.5s">
                             <div class="col-lg-10 pe-3">
                                 <?php if (!empty($heading)): ?>
-                                    <div class="playfair-regular font48 leading48 res-font36 res-leading40 text-black dmb-15 tpb-60 tmb-0">
+                                    <div class="playfair-regular font48 leading48 res-font36 res-leading40 text-black dmb-15">
                                         <?php echo $heading; ?>
                                     </div>
                                 <?php endif; ?>
@@ -740,7 +736,7 @@
                                     $heading = $cards['heading'];
                                     $description = $cards['description'];
                             ?>
-                                    <div class="expertise-card dpt-45 dpb-45 tpb-35">
+                                    <div class="expertise-card dpt-45 dpb-45 tpt-35 tpb-35 wow animated animate__fadeInUp" data-wow-duration="1.5s">
                                         <?php if (!empty($heading)): ?>
                                             <div class="montserrat font32 leading34 res-font22 res-leading27 text-303E3D fw-medium dmb-15 tmb-10">
                                                 <?php echo $heading; ?>
@@ -797,7 +793,7 @@
                                 <div class="showcase-card d-flex flex-lg-row flex-column">
                                     <div class="col-lg-6 pe-lg-5">
                                         <div class="showcase-img w-100">
-                                            <img src="{{image}}" alt="" class="w-100 h-100 object-cover">
+                                            <img src="{{image}}" alt="{{title}}" class="w-100 h-100 object-cover">
                                         </div>
                                     </div>
                                     <div class="col-lg-6 ps-lg-5">
@@ -836,7 +832,7 @@
             $description = get_sub_field('description');
         ?>
             <!-- latest-blog-section -->
-            <section class="latest-blog-section">
+            <section class="latest-blog-section overflow-hidden">
                 <div class="container">
                     <div class="dmb-55 tmb-40">
                         <?php if (!empty($heading)): ?>
@@ -874,7 +870,7 @@
                                                         </div>
                                                     {{/if}}
                                                 </div>
-                                                <div class="pe-4">
+                                                <div class="pe-lg-4">
                                                     <div class="montserrat font24 leading34 res-font22 res-leading30 text-black fw-medium dmb-10">
                                                         {{title}}
                                                     </div>
@@ -892,7 +888,7 @@
                                 <div class="col-lg-6 right-blog-cards">
                                     {{#each posts}}
                                         {{#if (and (gt @index 0) (lt @index 4))}}
-                                        <div class="post-cards d-flex flex-column flex-lg-row align-items-center tmt-45 dmt-30">
+                                        <div class="post-cards d-flex flex-column flex-lg-row align-items-lg-center tmt-45 dmt-30">
                                             <div class="col-12 col-lg-6 pe-lg-4">
                                                 <div class="post-img w-100 radius5 overflow-hidden tmb-25">
                                                     <img src="{{image}}" alt="{{title}}" class="w-100 h-100 object-cover">
@@ -911,7 +907,7 @@
                                                         </div>
                                                     {{/if}}
                                                 </div>
-                                                <div class="pe-4">
+                                                <div class="pe-lg-4">
                                                     <div class="montserrat font24 leading34 res-font22 res-leading30 text-black fw-medium tmb-10 dmb-15">
                                                         {{title}}
                                                     </div>
@@ -947,7 +943,7 @@
                                                     </div>
                                                 {{/if}}
                                             </div>
-                                            <div class="pe-4">
+                                            <div class="pe-lg-4">
                                                 <div class="montserrat font24 leading34 res-font22 res-leading30 text-black fw-medium dmb-10">
                                                     {{title}}
                                                 </div>
@@ -984,14 +980,14 @@
             <!-- recent-slider-section -->
             <section class="recent-slider-section position-relative overflow-hidden">
                 <div class="container">
-                    <div class="d-flex align-items-center justify-content-between dmb-50">
+                    <div class="d-flex align-items-center justify-content-between tmb-30 dmb-50 wow animated animate__fadeInUp" data-wow-duration="1.5s">
                         <?php if (!empty($heading)): ?>
-                            <div class="playfair-regular font48 leading52 text-black">
+                            <div class="playfair-regular font48 leading52 res-font36 res-leading40 text-black">
                                 <?php echo $heading; ?>
                             </div>
                         <?php endif; ?>
-                        <div class="d-flex align-items-center">
-                            <div class="service-dots me-4"></div>
+                        <div class="d-lg-flex d-none align-items-center">
+                            <div class="service-dots me-lg-4 tmb-35"></div>
                             <?php if (!empty($button['url']) && !empty($button['title'])): ?>
                                 <a href="<?php echo $button['url']; ?>" target="<?php echo $button['target'] == '_blank' ? "_blank" : ""; ?>" class="text-decoration-none btnA bg-transparent-btn montserrat font15 leading18 fw-medium text-uppercase d-inline-flex align-items-center rounded-pill">
                                     <?php echo $button['title']; ?>
@@ -999,23 +995,31 @@
                             <?php endif; ?>
                         </div>
                     </div>
-                    <div class="col-10 pe-5">
-                        <div class="col-12 pe-4 recent-service-slider">
+                    <div class="col-lg-10 pe-lg-5 wow animated animate__fadeInUp" data-wow-duration="1.5s">
+                        <div class="col-lg-12 col-11 pe-4 pe-lg-0 recent-service-slider">
                             <?php if ($query->have_posts()):
                                 while ($query->have_posts()): $query->the_post();
                                     $service_id = get_the_ID();
                                     $link = get_the_permalink($service_id);
                                     $image = get_the_post_thumbnail_url($service_id, 'medium');
+                                    $title = get_the_title($service_id);
                             ?>
-                                    <a href="<?php echo $link; ?>" class="service-image h-100">
+                                    <a href="<?php echo $link; ?>" class="service-image h-100 radius5 overflow-hidden">
                                         <?php if (!empty($image)): ?>
-                                            <img src="<?php echo $image; ?>" alt="" class="w-100 h-100 object-cover">
+                                            <img src="<?php echo $image; ?>" alt="<?php echo $title; ?>" class="w-100 h-100 object-cover">
                                         <?php endif; ?>
                                     </a>
                             <?php endwhile;
                                 wp_reset_postdata();
                             endif; ?>
                         </div>
+                    </div>
+                    <div class="service-slider-dots d-flex d-lg-none flex-column align-items-center tmt-55 wow animated animate__fadeInUp" data-wow-duration="1.5s">
+                        <?php if (!empty($button['url']) && !empty($button['title'])): ?>
+                            <a href="<?php echo $button['url']; ?>" target="<?php echo $button['target'] == '_blank' ? "_blank" : ""; ?>" class="text-decoration-none btnA bg-transparent-btn montserrat font15 leading18 fw-medium text-uppercase d-inline-flex align-items-center rounded-pill">
+                                <?php echo $button['title']; ?>
+                            </a>
+                        <?php endif; ?>
                     </div>
                 </div>
             </section>
@@ -1140,8 +1144,17 @@
             </section>
 
 
-        <?php elseif (get_row_layout() == 'divider'): ?>
-            <section class="divider divider-808080-25"></section>
+        <?php elseif (get_row_layout() == 'divider'):
+            $white_or_dark = get_sub_field('white_or_dark');
+
+            $divider = "";
+            if ($white_or_dark == "White") {
+                $divider = "divider-F0EBE2-25";
+            } elseif ($white_or_dark == "Dark") {
+                $divider = "divider-808080-25";
+            }
+        ?>
+            <section class="divider <?php echo $divider; ?>"></section>
 
         <?php elseif (get_row_layout() == 'spacing'):
             $background_color = get_sub_field('background_color');

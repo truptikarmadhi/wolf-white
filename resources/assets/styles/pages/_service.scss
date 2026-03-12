@@ -1,0 +1,16 @@
+.two-image-content-section {
+    .first-img {
+        height: 608px;
+    }
+
+    .second-img {
+        height: 320px;
+    }
+
+    .first-img,
+    .second-img {
+        @include media-breakpoint-down(lg) {
+            height: 167px;
+        }
+    }
+}

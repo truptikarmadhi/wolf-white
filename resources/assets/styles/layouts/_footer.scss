@@ -1,0 +1,22 @@
+.footer{
+    .footer-logo{
+        height: 124px;
+
+        @include media-breakpoint-down(lg){
+            height: 98px;
+        }
+    }
+
+    .newsletter-form{
+        .input{
+            padding-right: 160px !important;
+        }
+    }
+    .footer-menu{
+        li{
+            &:first-child{
+                padding-left: 0px !important;
+            }
+        }
+    }
+}

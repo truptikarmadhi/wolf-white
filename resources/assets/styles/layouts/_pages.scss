@@ -17,12 +17,16 @@
     &.divider-808080-25 {
         border-bottom: 1px solid rgba($color: $color-808080, $alpha: 0.25);
     }
+
+    &.divider-F0EBE2-25 {
+        border-bottom: 1px solid rgba($color: $color-F0EBE2, $alpha: 0.25);
+    }
 }
 
 .banner-section {
     height: 530px;
 
-    @include media-breakpoint-down(lg){
+    @include media-breakpoint-down(lg) {
         height: 475px;
     }
 }
@@ -30,7 +34,26 @@
 .sub-hero-img {
     height: 810px;
 
-    @include media-breakpoint-down(lg){
+    @include media-breakpoint-down(lg) {
         height: 325px;
+    }
+}
+
+.contact-information {
+    .contact-info {
+        width: 24px;
+        height: 20px;
+    }
+}
+
+.social-icons {
+    .social-icon {
+        width: 42px;
+        height: 42px;
+        border: 1px solid rgba($color: $color-808080, $alpha: 0.55);
+
+        .social-img {
+            height: 18px;
+        }
     }
 }

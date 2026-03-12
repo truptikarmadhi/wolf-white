@@ -1,20 +1,16 @@
-<section class="error-404 not-found dpt-120 h-vh d-flex align-items-center dpb-120 text-center">
-    <div class="container">
-
-        <div class="font80 leading90 dmb-20">404</div>
-
-        <div class="font32 leading40 dmb-20">
-            <?php esc_html_e( 'Page Not Found', 'your-theme-textdomain' ); ?>
+<div class="error-section h-vh d-flex align-items-center justify-content-center">
+    <div class="row">
+        <div class="playfair-regular font64 leading68 text-AF9DA3 text-center dmb-35">
+          404
+        </div>    
+        <div class="montserrat font20 leading24 text-black fw-normal text-center dmb-20">
+          Page not found
+        </div>   
+        <div class="d-flex justify-content-center">
+           <a href="<?php echo get_home_url(); ?>"
+                    class="text-decoration-none btnA bg-AF9DA3-btn montserrat font15 leading18 fw-normal text-uppercase text-nowrap rounded-pill d-inline-flex align-items-center transition">
+               Back to Homepage
+            </a>
         </div>
-
-        <div class="font18 leading28 dmb-40">
-            <?php esc_html_e( 'Sorry, the page you are looking for does not exist or has been moved.', 'your-theme-textdomain' ); ?>
-        </div>
-
-        <a href="<?php echo esc_url( home_url('/') ); ?>" 
-           class="btnB link-btn">
-            <?php esc_html_e( 'Back to Home', 'your-theme-textdomain' ); ?>
-        </a>
-
     </div>
-</section>
+</div>

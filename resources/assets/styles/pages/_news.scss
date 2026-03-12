@@ -14,10 +14,18 @@
 
     .single-img {
         height: 684px;
+
+        @include media-breakpoint-down(lg){
+            height: 230px;
+        }
     }
 
     .single-post-img {
         height: 400px;
+
+        @include media-breakpoint-down(lg){
+            height: 180px;
+        }
     }
 
     .single-title {
@@ -26,6 +34,11 @@
                 font-size: $font20;
                 line-height: $leading27;
                 font-weight: 500 !important;
+
+                @include media-breakpoint-down(lg){
+                    font-size: $font18;
+                    line-height: $leading24;
+                }
             }
         }
     }

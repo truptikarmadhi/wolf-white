@@ -4,6 +4,7 @@
 @import "../../node_modules/slick-carousel/slick/slick.scss"; 
 @import "../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css";
 @import "../../node_modules/select2/dist/css/select2.min.css";
+@import "../../node_modules/animate.css/animate.min.css";
 
 @import '../../node_modules/bootstrap/scss/functions';
 @import '../../node_modules/bootstrap/scss/variables';
@@ -39,6 +40,5 @@ $grid-breakpoints: (
 @import "pages/_home";
 @import "pages/_case";
 @import "pages/_privacy";
-@import "pages/_contact";
 @import "pages/_news";
-@import "pages/_about";
+@import "pages/_service";
